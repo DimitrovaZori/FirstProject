@@ -9,20 +9,37 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter  number for length: ");
         int length = scanner.nextInt();
+
+        while (length<=0){
+            System.out.println("Въведи положително число!");
+            length = scanner.nextInt();
+        }
+
         System.out.println("Enter number for height: ");
         int height = scanner.nextInt();
+
+        while (height<=0){
+            System.out.println("Въведи положително число!");
+            height = scanner.nextInt();
+            
+        }
         int s = length*height;
         int p = 2*(length+height);
 
         System.out.println("Лицето на правоъгълника е " + s + ", а периметърът е " + p + ".");
     }
 }
+
 // Message is:
 Enter  number for length: 
-5
+-1
+Въведи положително число!
+2
 Enter number for height: 
-6
-Лицето на правоъгълника е 30, а периметърът е 22.
+-3
+Въведи положително число!
+3
+Лицето на правоъгълника е 6, а периметърът е 10.
 
 Process finished with exit code 0
 
