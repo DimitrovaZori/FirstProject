@@ -1,0 +1,29 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    private static Scanner keyboard;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter  number for length: ");
+        int length = scanner.nextInt();
+        System.out.println("Enter number for height: ");
+        int height = scanner.nextInt();
+        int s = length*height;
+        int p = 2*(length+height);
+
+        System.out.println("Лицето на правоъгълника е " + s + ", а периметърът е " + p + ".");
+    }
+}
+// Message is:
+Enter  number for length: 
+5
+Enter number for height: 
+6
+Лицето на правоъгълника е 30, а периметърът е 22.
+
+Process finished with exit code 0
+
+//
