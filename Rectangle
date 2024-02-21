@@ -1,0 +1,29 @@
+package org.example;
+
+public class Rectangle {
+    private double length;
+    private double height;
+
+    public Rectangle(){
+        this.length = 0;
+        this.height = 0;
+    }
+    public Rectangle(double length, double height){
+        this.length = length;
+        this.height = height;
+    }
+    public double calculateArea(){
+        return length * height;
+    }
+
+    public double calculatePerimeter(){
+        return 2 * (length + height);
+    }
+
+}
+
+///Main
+  Rectangle data = new Rectangle(5.5,6.4);
+
+            System.out.println(data.calculatePerimeter());
+            System.out.println(data.calculateArea());
