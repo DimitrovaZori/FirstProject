@@ -30,7 +30,11 @@ public class SeleniumDemo {
 
         WebElement checkBox = driver.findElement(By.id("my-check-1"));
         checkBox.click();
+ WebElement password = driver.findElement(By.xpath("//*[@name ='my-password']"));
+        password.click();
 
+        WebElement submit = driver.findElement(By.xpath("//*[@type='submit']"));
+        submit.click();
    
 
     }
