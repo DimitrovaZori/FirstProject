@@ -24,23 +24,14 @@ public class SeleniumDemo {
         WebElement textInput = driver.findElement(By.id("my-text-id"));
         textInput.click();
 
-        WebElement password = driver.findElement(By.name("[type ='password']"));
-        password.click();
-
+      
         WebElement textArea = driver.findElement(By.name("my-textarea"));
         textArea.click();
 
         WebElement checkBox = driver.findElement(By.id("my-check-1"));
         checkBox.click();
 
-        WebElement submit = driver.findElement(By.cssSelector("btn btn-outline-primary mt-3"));
-        submit.click();
-
-        WebElement picker = driver.findElement(By.tagName("input.form-control[name = my-date]"));
-        picker.click();
-
-        WebElement color = driver.findElement(By.name("[value = #563d7c]"));
-        color.click();
+   
 
     }
 }
