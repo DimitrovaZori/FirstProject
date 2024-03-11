@@ -1,0 +1,46 @@
+package dev.selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.time.Duration;
+
+public class SeleniumDemo {
+    WebDriver driver;
+
+    @BeforeMethod
+    public void before() {
+        driver = new ChromeDriver();
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+    }
+
+    @Test
+    public void testOpenBrowser() {
+        WebElement textInput = driver.findElement(By.id("my-text-id"));
+        textInput.click();
+
+        WebElement password = driver.findElement(By.name("[type ='password']"));
+        password.click();
+
+        WebElement textArea = driver.findElement(By.name("my-textarea"));
+        textArea.click();
+
+        WebElement checkBox = driver.findElement(By.id("my-check-1"));
+        checkBox.click();
+
+        WebElement submit = driver.findElement(By.cssSelector("btn btn-outline-primary mt-3"));
+        submit.click();
+
+        WebElement picker = driver.findElement(By.tagName("input.form-control[name = my-date]"));
+        picker.click();
+
+        WebElement color = driver.findElement(By.name("[value = #563d7c]"));
+        color.click();
+
+    }
+}
